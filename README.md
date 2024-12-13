@@ -42,7 +42,7 @@ else
 ### (1) 변수 및 함수 이름
 - Camel Case(예: myVariableName) 또는 Snake Case(예: my_variable_name) 사용.
 - 변수: 소문자로 시작 (예: count, total_sum).
-- 함수: 명확하고 동사로 시작 (예: getData(), setValue()).
+- 함수: 명확하고 동사로 시작 (예: GetData(), SetValue()).
 ### (2) 상수 이름
 - 모두 대문자와 언더스코어 사용 (예: MAX_LENGTH, DEFAULT_VALUE).
 ### (3) 접두사 사용
@@ -54,7 +54,7 @@ else
 - // 사용. 간단한 설명 작성.
 ```
 // 입력 값을 검증하는 함수
-void validateInput(int input);
+void ValidateInput(int input);
 ```
 ### (2) 멀티라인 주석
 - /* ... */ 사용. 블록 단위 설명에 적합.
@@ -63,7 +63,7 @@ void validateInput(int input);
  * 이 함수는 입력 값을 검증하고
  * 조건에 따라 결과를 반환합니다.
  */
-int validateInput(int input);
+int ValidateInput(int input);
 ```
 ## 4. 공백 사용(Spacing)
 - 연산자 주변: 가독성을 위해 공백 추가.
@@ -73,19 +73,19 @@ int result=a+b;      // Bad
 ```
 - 함수 정의와 호출: 괄호와 함수명 사이에 공백 없음.
 ```
-void myFunction(int param);  // Good
-void myFunction (int param); // Bad
+void MyFunction(int param);  // Good
+void MyFunction (int param); // Bad
 ```
 ## 5. 파일 구조
 ### (1) 헤더 파일
 - 보호 매크로 또는 #pragma once 사용.
 ```
-#ifndef HEADER_FILE_NAME_H
-#define HEADER_FILE_NAME_H
+#ifndef __HEADER_FILE_NAME_H__
+#define __HEADER_FILE_NAME_H__
 
 // 헤더 파일 내용
 
-#endif // HEADER_FILE_NAME_H
+#endif // __HEADER_FILE_NAME_H__
 ```
 ### (2) 파일 정리
 - 관련 함수 및 선언은 논리적으로 그룹화.
@@ -105,7 +105,7 @@ const int MAX_LENGTH = 100;  // Prefer
 - 의미 있는 이름의 상수를 정의해 사용.
 ```
 const int PI = 3.14
-int calculateArea(int width, int height) {
+int CalculateArea(int width, int height) {
     // return 3.14 * width * height; // Magic Number 사용 지양
     return PI * width * heigt;
 }
